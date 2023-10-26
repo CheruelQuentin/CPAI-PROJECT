@@ -27,20 +27,19 @@ async function getThresholdInDB(req, res) {
     res.status(200).send(locations)
 }
 async function insertSensorData(req, res) {
-    const con_dissolved_oxygen  = req.body.con_dissolved_oxygen, 
-    const con_micro_algae  = req.body.con_micro_algae, 
-    const quan_pesticide = req.body.quan_pesticide,
-    const quan_herbicide  = req.body.quan_herbicide, 
-    const quan_heavy_metal  = req.body.quan_heavy_metal, 
-    const bacteria_level  = req.body.bacteria_level, 
-    const salinity  = req.body.salinity, 
-    const turbidity  = req.body.turbidity, 
-    const temperature = req.body.temperature,
-    const date_mesured  = req.body.date_mesured, 
-    const battery_remaining_percent  = req.body.battery_remaining_percent, 
+    const con_dissolved_oxygen  = req.body.con_dissolved_oxygen
+    const con_micro_algae  = req.body.con_micro_algae
+    const quan_pesticide = req.body.quan_pesticid
+    const quan_herbicide  = req.body.quan_herbicide
+    const quan_heavy_metal  = req.body.quan_heavy_metal
+    const bacteria_level  = req.body.bacteria_level
+    const salinity  = req.body.salinity
+    const turbidity  = req.body.turbidity
+    const temperature = req.body.temperatur
+    const date_mesured  = req.body.date_mesured
+    const battery_remaining_percent  = req.body.battery_remaining_percent
     const id_sensor  = req.body.id_sensor
-    const sensorData = await  CPAI.createSensorData(con_dissolved_oxygen,con_micro_algae,quan_pesticide,quan_herbicide,quan_heavy_metal,bacteria_level,salinity,turbidity
-    temperature,date_mesured,battery_remaining_percent,id_sensor);
+    const sensorData = await  CPAI.createSensorData(con_dissolved_oxygen,con_micro_algae,quan_pesticide,quan_herbicide,quan_heavy_metal,bacteria_level,salinity,turbiditytemperature,date_mesured,battery_remaining_percent,id_sensor);
     res.status(200).send(sensorData)
 }
 

@@ -131,8 +131,7 @@ async function getThresholdCPAI () {
     }
 }
 
-async function createSensorData(con_dissolved_oxygen,con_micro_algae,quan_pesticide,quan_herbicide,quan_heavy_metal,bacteria_level,salinity,turbidity
-temperature,date_mesured,battery_remaining_percent,id_sensor) {
+async function createSensorData(con_dissolved_oxygen,con_micro_algae,quan_pesticide,quan_herbicide,quan_heavy_metal,bacteria_level,salinity,turbidity,temperature,date_mesured,battery_remaining_percent,id_sensor) {
     const connection = mysql.createConnection({
         host: 'localhost',
         user: 'root',
