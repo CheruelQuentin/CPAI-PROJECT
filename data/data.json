@@ -1,0 +1,102 @@
+{
+    "WaterBodyTypes": [
+        {"id": 1, "type_name": "Lake"},
+        {"id": 2, "type_name": "River"}
+    ],
+    "ThresholdTypes": [
+        {"id": 1, "type_name": "Critical"},
+        {"id": 2, "type_name": "Warning"}
+    ],
+    "WaterBodies": [
+        {
+            "id": 1,
+             "name": "Lake Superior",
+            "area_skm": 82103.31,
+            "length_km": 616,
+            "depth_m": 406.3,
+            "volume_cm": 2.900,
+            "sky_exposed": true,
+            "longitude": "87.0W",
+            "latitude": "47.7N",
+            "id_type": 1
+        },
+        {
+            "id": 2,
+            "name": "Mississippi River",
+            "area_skm": 3739.9,
+            "length_km": 3739.9,
+            "depth_m": 20.1,
+            "volume_cm": 6.6813,
+            "sky_exposed": true,
+            "longitude": "90.0W",
+            "latitude": "29.0N",
+            "id_type": 2
+        }
+    ],
+    "WaterQualityThresholds": [
+        {
+            "id": 1,
+            "min_value": 0,
+            "max_value": 9,
+            "parameter_name": "Dissolved Oxygen",
+            "id_type": 1
+        },
+        {
+            "id": 2,
+            "min_value": 0,
+            "max_value": 50,
+            "parameter_name": "Turbidity",
+            "id_type": 2
+        }
+    ],
+    "Sensors": [
+        {
+            "id": 1,
+            "latitude": 47.7,
+            "longitude": -87.0,
+            "id_body": 1
+        },
+        {
+            "id": 2,
+            "latitude": 29.0,
+            "longitude": -90.0,
+            "id_body": 2
+        }
+    ],
+    "SensorData": [
+        {
+            "id": 1,
+            "con_dissolved_oxygen": 8.2,
+            "con_micro_algae": 15.3,
+            "quan_pesticide": 0.01,
+            "quan_herbicide": 0.05,
+            "quan_heavy_metal": 0.003,
+            "bacteria_level": 2.5,
+            "salinity": 0.1,
+            "turbidity": 25,
+            "temperature": 15,
+            "date_mesured": "2023-10-24T12:00:00",
+            "battery_remaining_percent": 75,
+            "id_sensor": 1
+        },
+        {
+            "id": 2,
+            "con_dissolved_oxygen": 7.8,
+            "con_micro_algae": 14.5,
+            "quan_pesticide": 0.02,
+            "quan_herbicide": 0.04,
+            "quan_heavy_metal": 0.002,
+            "bacteria_level": 2.3,
+            "salinity": 0.2,
+            "turbidity": 30,
+            "temperature": 16,
+            "date_mesured": "2023-10-24T12:15:00",
+            "battery_remaining_percent": 70,
+            "id_sensor": 2
+        }
+    ],
+    "BodyTypeThresholds": [
+        {"id_body": 1, "id_threshold": 1},
+        {"id_body": 2, "id_threshold": 2}
+    ]
+}
